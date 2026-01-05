@@ -42,7 +42,14 @@ joinBtn.onclick = async () => {
   const userRef = ref(db, `global/users/${uid}`);
   set(userRef, { nick });
   onDisconnect(userRef).remove();
+  
+  onValue(ref(db, "global/counter"), snap => {
+    if (snap.val() === null) {
+      set(ref(db, "global/counter"), 0);
+    }
+  }, { onlyOnce: true });
 
+  
   hello.textContent = `Cześć ${nick} 👋`;
   login.style.display = "none";
   appBox.style.display = "block";
