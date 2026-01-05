@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Słówka LIVE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui,sans-serif;
+  background:#f3f4f6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+}
+.card{
+  background:#fff;
+  padding:24px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+  width:320px;
+  text-align:center;
+}
+input,button{
+  width:100%;
+  padding:12px;
+  margin-top:12px;
+  font-size:16px;
+}
+button{
+  font-weight:800;
+  cursor:pointer;
+}
+.counter{
+  font-size:48px;
+  margin:20px 0;
+  font-weight:900;
+}
+.small{
+  opacity:.7;
+  font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<div class="card" id="login">
+  <h2>🟦 Słówka LIVE</h2>
+  <p>Podaj swój nick</p>
+  <input id="nick" placeholder="Twój nick">
+  <button id="join">Dołącz</button>
+</div>
+
+<div class="card" id="app" style="display:none">
+  <h2 id="hello"></h2>
+  <div class="counter" id="count">0</div>
+  <button id="inc">➕ Kliknij</button>
+  <p class="small">Online: <span id="online">0</span></p>
+</div>
+
+<script type="module" src="firebase.js"></script>
+</body>
+</html>
