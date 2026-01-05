@@ -4,13 +4,13 @@ import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/1
 
 /* 🔴 TU POTEM WKLEISZ SWOJE DANE Z FIREBASE */
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_AUTH_DOMAIN",
-  databaseURL: "TU_DATABASE_URL",
-  projectId: "TU_PROJECT_ID",
-  storageBucket: "TU_STORAGE",
-  messagingSenderId: "TU_SENDER_ID",
-  appId: "TU_APP_ID"
+  apiKey: "AIzaSyAnFe0WHxLowybOqXQrlLM8EGg6EU6dkqE",
+  authDomain: "slowka-live.firebaseapp.com",
+  databaseURL: "https://slowka-live-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "slowka-live",
+  storageBucket: "slowka-live.appspot.com",
+  messagingSenderId: "651585195290",
+  appId: "1:651585195290:web:0dc1e8452d4c0b16a3b0a3"
 };
 
 const app = initializeApp(firebaseConfig);
